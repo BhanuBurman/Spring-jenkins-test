@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class SayHelloController {
     @GetMapping("/greet/{name}")
     public String greet(@PathVariable String name){
+        System.out.println("Checking if the commit triggers the jenkins build or not");
         return "Hello "+name;
     }
 }
